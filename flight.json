@@ -1,0 +1,126 @@
+let fightDetail = {
+    flight_info : [
+        {
+            "id": 1,
+            "airline": "Air india",
+            "from": "Pune",
+            "to": "Kolkatta",
+            "from_code": "PUN",
+            "to_code": "KOL",
+            "depart_date": "12-MAY-2019 10:00",
+            "arrive_date": "12-JUN-2019 23:00",
+            "price": 9500,
+            "availableSeat": 45
+        },
+        {
+            "id": 2,
+            "airline": "Indigo",
+            "from": "Mumbai",
+            "to": "Bangalore",
+            "from_code": "BOM",
+            "to_code": "BLR",
+            "depart_date": "13-MAY-2019 10:00",
+            "arrive_date": "13-JUN-2019 23:00",
+            "price": 10500,
+            "availableSeat": 45
+        },
+        {
+            "id": 3,
+            "airline": "AirAsia",
+            "from": "Mumbai",
+            "to": "Bangalore",
+            "from_code": "BOM",
+            "to_code": "BLR",
+            "depart_date": "14-MAY-2019 10:00",
+            "arrive_date": "14-JUN-2019 23:00",
+            "price": 10500,
+            "availableSeat": 45
+        },
+        {
+            "id": 4,
+            "airline": "SpiceJet",
+            "from": "Pune",
+            "to": "Kolkatta",
+            "from_code": "PUN",
+            "to_code": "KOL",
+            "depart_date": "15-MAY-2019 10:00",
+            "arrive_date": "15-JUN-2019 23:00",
+            "price": 9500,
+            "availableSeat": 45
+        },
+        {
+            "id": 5,
+            "airline": "AirAsia",
+            "from": "Pune",
+            "to": "Kolkatta",
+            "from_code": "PUN",
+            "to_code": "KOL",
+            "depart_date": "16-MAY-2019 10:00",
+            "arrive_date": "16-JUN-2019 23:00",
+            "price": 9500,
+            "availableSeat": 45
+        },
+        {
+            "id": 6,
+            "airline": "Vistara",
+            "from": "Pune",
+            "to": "Kolkatta",
+            "from_code": "PUN",
+            "to_code": "KOL",
+            "depart_date": "17-MAY-2019 10:00",
+            "arrive_date": "17-JUN-2019 23:00",
+            "price": 9500,
+            "availableSeat": 45
+        },
+        {
+            "id": 7,
+            "airline": "TruJet",
+            "from": "Pune",
+            "to": "Kolkatta",
+            "from_code": "PUN",
+            "to_code": "KOL",
+            "depart_date": "18-MAY-2019 10:00",
+            "arrive_date": "18-JUN-2019 23:00",
+            "price": 9500,
+            "availableSeat": 45
+        },
+        {
+            "id": 8,
+            "airline": "Star Air",
+            "from": "Pune",
+            "to": "Kolkatta",
+            "from_code": "PUN",
+            "to_code": "KOL",
+            "depart_date": "19-MAY-2019 10:00",
+            "arrive_date": "19-JUN-2019 23:00",
+            "price": 9500,
+            "availableSeat": 45
+        },
+        {
+            "id": 9,
+            "airline": "Alliance Air",
+           "from": "Mumbai",
+            "to": "Kolkatta",
+            "from_code": "BOM",
+            "to_code": "KOL",
+            "depart_date": "20-MAY-2019 10:00",
+            "arrive_date": "20-JUN-2019 23:00",
+            "price": 1500,
+            "availableSeat": 45
+        },
+        {
+            "id": 10,
+            "airline": "Air India Express",
+            "from": "Mumbai",
+            "to": "Kolkatta",
+            "from_code": "BOM",
+            "to_code": "KOL",
+            "depart_date": "21-MAY-2019 10:00",
+            "arrive_date": "22-JUN-2019 23:00",
+            "price": 9500,
+            "availableSeat": 45
+        }
+    ]
+}
+      
+
