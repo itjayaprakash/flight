@@ -1,258 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/jquery.datetimepicker.css">
-    <title>Flight Search</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
-</head>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>General Data Protection Regulation</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
 
-<body>
 
-    <!-- header Section Start -->
-    <header>
-        <div class="template">
-            <div class="logo">
-                <img src="logo.png" alt="logo">
-            </div>
-        </div>
-    </header>
-    <!-- header Section End -->
-
-    <main>
-        <!-- nav section start -->
-        <aside>
-            <div class="tab_navigation">
-                <button id="oneway_btn" class="btn active" onclick="oneway_tab()">One way</button>
-                <button id="return_btn" class="btn" onclick="return_tab()">Return</button>
-            </div>
-            <form class="search_form active" autocomplete="off" onsubmit="return form_submission(event);">
-                <div class="form_control">
-                    <label>From</label>
-                    <input type="text" name="from" list="from_place" placeholder="Enter origin" required>
-                    <datalist id="from_place"></datalist>
-                </div>
-                <div class="form_control">
-                    <Label>To</Label>
-                    <input type="text" name="to" list="to_place" placeholder="Enter destination" required>
-                    <datalist id="to_place"></datalist>
-                </div>
-                <div class="form_control">
-                    <Label>On</Label>
-                    <input id="ondate" name="ondate" type="text" placeholder="Departure date" required>
-                </div>
-                <div class="form_control">
-                    <Label>Passengers</Label>
-                    <select selected="selected" name="Passengers">
-                        <option selected value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn search" value="Search">SEARCH</button>
-                </div>
-            </form>
-        </aside>
-        <!-- nav section end -->
-
-        <!-- main section start -->
-        <section>
-            <div class="section_header">
-                <div class="header_left" id="flight_navigation">
-                    <span>Pune</span> > <span>Delhi</span>
-                </div>
-                <div class="header_right" id="date_sec">
-                    <div class="from_date_result">
-                        Depart : 1st May 2019
-                    </div>
-                    <div class="return_date_result">
-                        Return : 6st May 2019
-                    </div>
-                </div>
-            </div>
-
-            <div class="section_body">
-                <div class="flight_travel">
-                    <ul>
-                        <li>
-                            <img src="https://promos.makemytrip.com/store/DubaiDT.JPG">
-                            <div class="flight_desc">
-                                <p class="f_title">Dubai</p>
-                                <p class="f_information">Flights, 1080 Hotels, 410 Homestays, Holiday Packages</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://promos.makemytrip.com/store/GoaDT.JPG">
-                            <div class="flight_desc">
-                                <p class="f_title">Goa</p>
-                                <p class="f_information">Flights, 3937 Hotels, 2373 Homestays, Holiday Packages</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://promos.makemytrip.com/store/MumbaiDT.JPG">
-                            <div class="flight_desc">
-                                <p class="f_title">Mumbai</p>
-                                <p class="f_information">Flights, 3937 Hotels, 2373 Homestays, Holiday Packages</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://promos.makemytrip.com/store/MumbaiDT.JPG">
-                            <div class="flight_desc">
-                                <p class="f_title">Bangkok</p>
-                                <p class="f_information">Flights, 3937 Hotels, 2373 Homestays, Holiday Packages</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://promos.makemytrip.com/store/DelhiDT.JPG">
-                            <div class="flight_desc">
-                                <p class="f_title">Delhi</p>
-                                <p class="f_information">Flights, 3937 Hotels, 2373 Homestays, Holiday Packages</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://promos.makemytrip.com/store/PuneDT.JPG">
-                            <div class="flight_desc">
-                                <p class="f_title">Pune</p>
-                                <p class="f_information">Flights, 3937 Hotels, 2373 Homestays, Holiday Packages</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://promos.makemytrip.com/store/SingaporeDT.JPG">
-                            <div class="flight_desc">
-                                <p class="f_title">Singapore</p>
-                                <p class="f_information">Flights, 3937 Hotels, 2373 Homestays, Holiday Packages</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://promos.makemytrip.com/store/BangaloreDT.JPG">
-                            <div class="flight_desc">
-                                <p class="f_title">Bangalore</p>
-                                <p class="f_information">Flights, 3937 Hotels, 2373 Homestays, Holiday Packages</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://promos.makemytrip.com/store/JaipurDT.JPG">
-                            <div class="flight_desc">
-                                <p class="f_title">Jaipur</p>
-                                <p class="f_information">Flights, 1230 Hotels, 220 Homestays, Holiday Packages</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <ul class="flight_result_list" id="root"></ul>
-            </div>
-        </section>
-        <!-- main section end -->
-    </main>
-
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
-    <script type="text/javascript" src="flight.json"></script>
-    <script>
-
-         /*Ondate  datepicker*/
-        $("#ondate,#returndate").datetimepicker({
-            format: 'd-M-Y H:i',
-            step: 15,
-			minDate:0
-        }).click(function () { $(this).focus(); });
-
-        function getUnique(arr, comp) {
-            const unique = arr
-                .map(e => e[comp])
-                .map((e, i, final) => final.indexOf(e) === i && i)
-                .filter(e => arr[e]).map(e => arr[e]);
-            return unique;
-        }
 		
-        function form_submission(event) {
-            event.preventDefault()
-            let formdata = {
-                "from": event.target.elements["from"].value.split('-')[0],
-                "from_code": event.target.elements["from"].value.split('-')[1],
-                "to": event.target.elements["to"].value.split('-')[0],
-                "to_code": event.target.elements["to"].value.split('-')[1],
-                "ondate": event.target.elements["ondate"].value,
-                "Passengers": event.target.elements["Passengers"].value,
-            }
-			
-			var root_string = ` <span>${formdata.from}</span> > <span>${formdata.to}</span>`;
-			flight_navigation.innerHTML  = root_string;
 
-			
-			var date_string = `<div class="from_date_result">  Depart : ${formdata.ondate} </div>`
-			date_sec.innerHTML = date_string;
-			
-            let filteredObj = fightDetail.flight_info.filter((data, index) => {
-                if (formdata.from === data.from && formdata.to === data.to && Date.parse(data.arrive_date) >= Date.parse(formdata.ondate) && formdata.Passengers <= data.availableSeat) {
-                    return data;
-                } else {
-                    return false
-                }
-            })
-			
-            if(filteredObj.length>=1) {
-                document.getElementsByClassName('flight_travel')[0].style.display = "none";
-                let strFlight = '';
-                filteredObj.filter(function filterdata(data, index) {
-                    strFlight += `
-                        <li>
-                            <p class="amount"><strong>RS. ${data.price}</strong></p>
-                            <div class="flight_information">
-                                <div class="from_from_section">
-                                    <p class="flight_name">${data.airline}</p>
-                                    <p class="flight_desctravel">${data.from} > ${data.to}</p>
-                                    <p><label class="depart_date">Depart</label> : ${data.depart_date}</p>
-                                    <p><label class="arrive_date">Arrive</label> : ${data.arrive_date}</p>
-                                </div>
-                                <div class="from_return_section">
-                                    <p class="flight_name">${data.airline}</p>
-                                    <p class="flight_desctravel">${data.from} > ${data.to}</p>
-                                    <p><label class="depart_date">Depart</label> : ${data.depart_date}</p>
-                                    <p><label class="arrive_date">Arrive</label> : ${data.arrive_date}</p>
-                                </div>
-                            </div>
-                        </li>
-                    `
-                });
-                root.insertAdjacentHTML('beforeend', strFlight);
-            }
+		<div class="page-root">
+				<div class="privacy-content">
+					<!--<a href="#" class="close"></a>-->
+					<div class="pol-title">
+						<h2>PRIVACY NOTICE</h2>
+					</div>
+					<div id="agreement">
+						<div class="pol-bdy">
+							<h4>General Data Protection Regulation</h4>
+							<div class="pol-desc">
+								<p>As you may already be aware the General Data Protection Regulation comes into force on 25 May 2018. This legislation places greater obligations on companies not only in terms of how they process personal data, but also to ensure individuals are fully informed about the processing of their data that takes place.</p>
+								<p>This legislation applies to all companies who are based in the European Union or who process the personal data of individuals who live in the European Union. It accordingly has important implications for the entirety of the Integra group.</p>
+								<p>Integra Software Services Private Ltd. (“Integra”) is committed to protecting the privacy and security of personal information.</p>
+								<p>It is essential that all employees of Integra, wherever they are based, comply with the terms of our Global Data Protection Policy. Any breach of this policy may result in disciplinary action. You must accordingly read carefully the policy to ensure you understand and comply with the updated requirements.</p>                          
+								<p>If you have any questions about the obligations contained in Integra’s policies or your obligations under the General Data Protection Regulation please contact [NAME, TITLE] in the first instance.</p>
+							</div>
+						</div>
+					</div>
+					<div class="pol-bt">
+						<button class="btn" id="acpt">I ACCEPT</button>
+					</div>
+				</div>
+	    </div>
 
-            }
-    
-        
-        let fromPlaces = getUnique(fightDetail.flight_info.map(function (data, index) { return { "from": data.from, "code": data.from_code } }), "from")
-        let toPlaces = getUnique(fightDetail.flight_info.map(function (data, index) { return { "to": data.to, "code": data.to_code } }), "to")
 
-        let str_fromPlaces = '';
-        fromPlaces.map((data, index) => {
-            str_fromPlaces += `<option value="${data.from}-${data.code}"/>`
-        });
-
-        let str_toPlaces = '';
-        toPlaces.map((data, index) => {
-            str_toPlaces += `<option value="${data.to}-${data.code}"/>`
-        });
-
-        from_place.insertAdjacentHTML('beforeend', str_fromPlaces);
-        to_place.insertAdjacentHTML('beforeend', str_toPlaces);
-
-        //Tab Function
-        function oneway_tab() {
-            document.getElementById('return_btn').classList.remove('active');
-            document.getElementById('oneway_btn').classList.add('active');
-        }
-        function return_tab() {
-            document.getElementById('oneway_btn').classList.remove('active');
-            document.getElementById('return_btn').classList.add('active');
-        }
-    </script>
-
-</body>
-
+	</body>
 </html>
+ 
+ 
+ 
